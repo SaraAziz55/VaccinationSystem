@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+}
+.navbar{
+	background-color:#1C175A;
+	height:50px;
+	
+}
+
+.image {
+    position: relative;
+    height: 525px;
+    width: 100%;
+    display:flex;
+}
+
+.image img {
+    width: 100%;
+    height: 515px;
+    z-index: 0;
+}
+#overlay {
+  position: fixed; 
+  display: none; 
+  width: 100%; 
+  height: 100%; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  z-index: 2; 
+  
+}
+
+.image .img-txt {
+	padding-top:60px;
+    position: absolute;
+    top: 10%;
+    
+    color: white;
+    z-index: 1;
+    text-align: center;
+}
+
+.img-txt h1 {
+    font-size: 80px;
+    padding-left:10px;
+}
+
+.img-txt p {
+    font-size: 23px;
+    padding-left: 50px;
+}
+
+ h2{
+	padding-top:50px;
+	padding-bottom:50px;
+	text-align:center;
+	
+}
+.cn{
+	width:84%;
+	padding-bottom:80px;
+}
+.cn img{
+	width:470px;
+	height:370px;
+	float:left;
+	padding-left:90px;
+	padding-right:60px;
+}
+
+	
+.cn  p{
+	
+	font-size:17px;
+	
+}
+.card-deck{
+	padding-left:150px;
+	padding-right:150px;
+	padding-top:60px;
+	padding-bottom:60px;
+	background-color:#1C175A;
+
+}
+.card{
+	height:520px;
+	display:grid;
+	
+}
+.card .card-img1{
+	height:160px;
+	width:200px;
+	padding-top:30px;
+	padding-left:75px;
+	margin-bottom:80px;
+	display:grid;
+	
+}
+.card .card-img2{
+	height:160px;
+	width:200px;
+	padding-top:30px;
+	padding-left:75px;
+	margin-bottom:80px;
+	display:grid;
+}
+.card .card-img3{
+	height:160px;
+	width:200px;
+	padding-top:30px;
+	padding-left:75px;
+	margin-bottom:80px;
+	display:grid;
+}
+.card .card-body{
+	display:grid;
+}
+.card .card-body .card-title{
+	text-align:center;
+	margin-bottom:20px;
+}
+.card .card-body .card-text{
+	text-align:center;
+}
+.card .card-body button{
+	margin-top:30px;
+	margin-bottom:30px;
+	margin-left:65px;
+	background-color:#7ECCC5;
+	border:none;
+	width:120px;
+	height:30px;
+	
+}
+.card a{
+	color:white;
+	
+}
+.footer{
+	margin-top:10px;
+	border-top:solid 1px;
+	text-align:center;
+}
+@media(max-width:401px )and(max-width:600px){
+	#card-1{
+		display:block;
+}}
