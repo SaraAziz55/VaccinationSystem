@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="form.css">
+	<link rel="icon" href="vv.jpg" type="image/icon type">
+	<title>Register Form</title>
+	<script>
+	 var ageCheck = function() {
+  if (document.getElementById('age').value < 18)
+     {
+    document.getElementById('textage').style.color = '#f55252';
+    document.getElementById('textage').innerHTML = 'Age must be greater than 18';
+  } else {
+    document.getElementById('textage').style.color = '#5dd05d';
+    document.getElementById('textage').innerHTML = 'Great';
+  }
+}
+	
+    var check = function() {
+  if (document.getElementById('password').value ==
+    document.getElementById('cpassword').value) {
+    document.getElementById('message').style.color = '#5dd05d';
+    document.getElementById('message').innerHTML = 'Matched';
+  } else {
+    document.getElementById('message').style.color = '#f55252';
+    document.getElementById('message').innerHTML = 'Not Matching';
+  }
+}
+function checklen()
+{
+    var pass1 = document.getElementById("password");  
+    if(pass1.value.length<6){  
+        alert("Password must be at least 6 characters long. Try again!");  
+        return false;  
+  }  
+}
+</script>
+</head>
+<body>
+	<div class="container" style="width:390px;">
+		<form action="http://localhost/Vaxinn/func2.php" method="POST" class="login-email">
+           <h3 class="login-text" style="font-size: 2rem; font-weight: 800;">Register as Patient</h3>
+                                
+                                <div class="row register-form">
+                                    <div class="input-group">
+                                            <input type="text" class="form-control"  placeholder="First Name *" name="fname"  required/>
+                                    </div>
+									<div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *" name="lname" required/>
+                                    </div>
+                                    <div class="input-group">
+                                            <input type="email" class="form-control" placeholder="Your Email *" name="email" required />
+                                    </div>
+                                        
+                                    <div class="input-group">
+                                            <input type="tel" minlength="10" maxlength="10" name="contact" class="form-control" placeholder="Your Phone *" required />
+                                    </div>
+				<div class="input-group">
+                                            <input type="text" id="age" minlength="2" maxlength="2" name="age" class="form-control" placeholder="Your Age *" onkeyup=' ageCheck();' required /><span id='textage'></span>
+                                    </div>					
+										<div class="form-group">
+                                            <div class="maxl" style="color: #1C175A; margin-bottom:10px;">Gender:
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="Male" checked>
+                                                    <span style="color:#111;"> Male </span> 
+                                                </label>
+                                                <label class="radio inline"> 
+                                                    <input type="radio" name="gender" value="Female">
+                                                    <span style="color:#111;">Female </span> 
+                                                </label>
+                                            </div>
+                                            
+                                        </div>
+										<div class="input-group">
+                                            <input type="password" class="form-control" placeholder="Password *" id="password" name="password" onkeyup='check();' required/>
+                                        </div>
+										
+                                        
+                                        <div class="input-group">
+                                            <input type="password" class="form-control"  id="cpassword" placeholder="Confirm Password *" name="cpassword"  onkeyup='check();' required/><span id='message'></span>
+                                        </div>
+										<div class="input-group">
+				<button name="patsub1" class="btn" onclick="return checklen();">Register</button>
+			</div>
+                                        
+                                    
+                                          <p class="login-register-text">Already have an account?<a href="index1.html">Click Here</a></p>
+                                </div>
+		</form>
+	</div>
+</body>
+</html>
